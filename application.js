@@ -11,22 +11,18 @@ var calculateScore = function(stars, forks, issues) {
   return score.toFixed(0);
 };
 
+// var responseRefresh = setInterval(function(refreshRequest){
+//   $('#framework_results').load(refreshRequest);
+// }, 2000)
+
 $(document).ready(function() {
   for (var i in frameworks) {
-    // var $this = this;
-
-    $.ajax({
+    var refresh = $.ajax({
       url: "https://api.github.com/repos/" + i + "/" + frameworks[i],
       data: {
         client_id:'20e837d019d5fe789fb4',
         client_secret:'fff3b6fb15af529e9d3675383482607b1bb1771f'
       },
-      // success: function(data) {
-      //   if (data.success) {
-      //     console.log($this);
-      //     $('#framework_results').load('#framework_results');
-      //   }
-      // }
     }).done(function(response){
       var overallScore = calculateScore(response.stargazers_count, response.forks, response.open_issues)
       $('#framework_results').append(`
@@ -45,5 +41,7 @@ $(document).ready(function() {
         </div>
       `);
     });
-  }
+    console.log(refresh);
+    // responseRefresh(refresh);
+  };
 });
