@@ -11,7 +11,7 @@ var calculateScore = function(stars, forks, issues) {
   return score.toFixed(0);
 };
 
-// var responseRefresh = setInterval(function(refreshRequest){
+// var setInterval(function(refreshRequest){
 //   $('#framework_results').load(refreshRequest);
 // }, 2000)
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
         </div>
       `);
     });
-    console.log(refresh);
-    // responseRefresh(refresh);
+    // console.log(refresh);
+    // setInterval(refresh);
   };
 });
