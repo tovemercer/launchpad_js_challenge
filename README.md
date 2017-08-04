@@ -1,6 +1,4 @@
-# launchpad_js_challenge
-
-JavaScript Github Activity Tracker
+#JavaScript Github Activity Tracker
 
 To start this project, I began by brainstorming about different ways to approach how to an application that would meet the requirements. I looked into the different frameworks available and the fetch API, gaining some exposure to those I have less familiarity with. After a few test files using the different tools I decided to go with Jquery/Ajax. This is a library I am familiar with and thought it would handle the requirements of challenge nicely. 
 
